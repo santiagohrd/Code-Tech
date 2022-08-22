@@ -1,0 +1,6 @@
+Buena noche a todos.
+
+
+Con el fin de que practiquemos un poco Git y GitHub, hemos creado este 
+archivo tipo texto para que se presenten y hagan push y pull 
+al repositorio.
