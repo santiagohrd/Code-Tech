@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bab210e-3571-4c74-adf7-5a8150d048fb" name="Changes" comment="">
+    <list default="true" id="7bab210e-3571-4c74-adf7-5a8150d048fb" name="Changes" comment="realización del metodo empresa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Modelo/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Modelo/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Modelo/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Modelo/Empresa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/TechApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/TechApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,6 +96,14 @@
       <option name="presentableId" value="Default" />
       <updated>1661608598405</updated>
     </task>
+    <task id="LOCAL-00001" summary="realización del metodo empresa">
+      <created>1661828729139</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661828729139</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,5 +116,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="realización del metodo empresa" />
+    <option name="LAST_COMMIT_MESSAGE" value="realización del metodo empresa" />
   </component>
 </project>
