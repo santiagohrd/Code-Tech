@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="Empresa")
+//Base de dato tipo virtual Repository relacion entre la tabla y la entidad
 public class Empresa {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
