@@ -33,5 +33,12 @@ public class ServFactory {
     }
 
     //Eleminar
+    public boolean deletFactory(Integer id){
+        repoFactory.deleteById(id);
+        if(getFactoryID(id) != null){
+            return false;
+        }
+        return true;
+    }
 
 }

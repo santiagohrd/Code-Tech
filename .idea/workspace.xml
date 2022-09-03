@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bab210e-3571-4c74-adf7-5a8150d048fb" name="Changes" comment="ejecucion">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Repository/RepoFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Service/ServFactory.java" afterDir="false" />
+    <list default="true" id="7bab210e-3571-4c74-adf7-5a8150d048fb" name="Changes" comment="Creación de servicio y repositorio Empresa">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Contoller/ContFull.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/verEmpresas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Modelo/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Modelo/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Service/ServFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Service/ServFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/TechApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/TechApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +23,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -65,14 +67,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Users/Lenovo/Documents/Tech",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Users/Lenovo/Documents/Proyectos/prueba&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="TechApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Admi.Tech.TechApplication" />
@@ -116,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661829449678</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Creación de servicio y repositorio Empresa">
+      <created>1662007793726</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1662007793727</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,6 +143,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="realización del metodo empresa" />
     <MESSAGE value="ejecucion" />
-    <option name="LAST_COMMIT_MESSAGE" value="ejecucion" />
+    <MESSAGE value="Creación de servicio y repositorio Empresa" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creación de servicio y repositorio Empresa" />
   </component>
 </project>

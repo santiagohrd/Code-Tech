@@ -7,14 +7,17 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 public class TechApplication {
 	@GetMapping ("/test")
 	public String test() {
-		Empresa emp = new Empresa("Santiago SAS", "Calle 100", "2351397", "8032542-4");
-		emp.setNombre("SOL LTDA");
-		return emp.getNombre();
+		Empresa Fac = new Empresa("Santiago SAS", "Calle 100", "2351397", "8032542-4");
+		Fac.setNombre("SOL LTDA");
+		Fac.setTelefono("7869139641");
+		Fac.setDireccion("la vieja confiable");
+		Fac.setNIT("98752487-8");
+		return Fac.getNombre();
 	}
 
 	public static void main(String[] args) {
