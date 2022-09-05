@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>ESTA ES MI PRIMERA VISTA DE PRUEBA</title>
+    <title>Empresas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>Mi primera pagina vista empresa</h1><br>
-<h3>probando 123, 123, 123</h3>
+<div class="container-fluid">
+    <h1>LISTA DE EMPRESAS</h1>
+    <table class="table">
+        <tr><!--recuadro de la tabla-->
+            <th>ID</th><!--columna interno-->
+            <th>Nombre</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>NIT</th>
+            <th>EDITAR</th>
+            <th>ELIMINAR</th>
+        </tr>
+<!--llenar tabla con lo que creamos en cont full-->
+        <tr th:each="empresa : ${factorylist}">
+            <td th:text="${empresa.id}"></td>
+            <td th:text="${empresa.nombre}"></td>
+            <td th:text="${empresa.direccion}"></td>
+            <td th:text="${empresa.telefono}"></td>
+            <td th:text="${empresa.NIT}"></td>
+            <td><button type="button" class="btn btn-warning"><a th:href="@{/EditarEmpresa/{id}(id=${empresa.id})}">Editar</a></button></td>
+            <td><button type="button" class="btn btn-danger"><a th:href="@{/EliminarEmpresa/{id}(id=${empresa.id})}">Eliminar</a></button></td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>
