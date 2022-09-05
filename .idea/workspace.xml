@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bab210e-3571-4c74-adf7-5a8150d048fb" name="Changes" comment="Creación de servicio y repositorio Empresa">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Contoller/ContFull.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/verEmpresas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Service/ServFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Service/ServFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/TechApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/TechApplication.java" afterDir="false" />
-    </list>
+    <list default="true" id="7bab210e-3571-4c74-adf7-5a8150d048fb" name="Changes" comment="servicio y controller" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662007793727</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="servicio y controller">
+      <created>1662170716283</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1662170716283</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,6 +143,7 @@
     <MESSAGE value="realización del metodo empresa" />
     <MESSAGE value="ejecucion" />
     <MESSAGE value="Creación de servicio y repositorio Empresa" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creación de servicio y repositorio Empresa" />
+    <MESSAGE value="servicio y controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="servicio y controller" />
   </component>
 </project>
