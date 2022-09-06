@@ -22,16 +22,54 @@
   <h1>AGREGAR LOS DATOS DE LA EMPRESA</h1>
   <br>
   <form th:action="@{/GuardarEmpresa}" th:object="${fac}" method="post">
+    <!--Nombre-->
     <div class="form-group col-md-12">
       <label class="col-md-3" for="nombre">NOMBRE DE LA EMPRESA:</label>
       <div class="col-md-6">
-      <input type="text" th:field="*{nombre}" class="form-control" id="nombre">
+      <input type="text" th:field="*{nombre}" class="form-control" id="nombre" required="required">
       </div>
     </div>
 
-    <button type="submit" class="btn btn-default">Submit</button>
+    <!--Direccion-->
+    <div class="form-group col-md-12">
+      <label class="col-md-3" for="Direccion">DIRECCIÓN DE LA EMPRESA:</label>
+      <div class="col-md-6">
+        <input type="text" th:field="*{Direccion}" class="form-control" id="Direccion" required="required">
+      </div>
+    </div>
+
+    <!--Telefono-->
+    <div class="form-group col-md-12">
+      <label class="col-md-3" for="Telefono">TELEFONO DE LA EMPRESA:</label>
+      <div class="col-md-6">
+        <input type="text" th:field="*{Telefono}" class="form-control" id="Telefono" required="required">
+      </div>
+    </div>
+
+    <!--NIT-->
+    <div class="form-group col-md-12">
+      <label class="col-md-3" for="NIT">NIT DE LA EMPRESA:</label>
+      <div class="col-md-6">
+        <input type="text" th:field="*{NIT}" class="form-control" id="NIT" required="required">
+      </div>
+    </div>
+
+    <!-- button enviar-->
+    <div class="row">
+      <div class="col-md-2">
+        <button class="btn btn-success">Crear Empresa</button>
+      </div>
+    </div>
 
   </form>
+  <!-- button atras primera version
+  <div class="row">
+    <div class="form-group col-md-2">
+      <button type="button" class="btn btn-primary">VOLVER</button>
+    </div>
+  </div>-->
+  <br>
+  <a href="javascript: history.go(-1)" class="btn btn-info" role="button">Atrás</a>
 
 </div>
 </body>
