@@ -14,12 +14,19 @@ import java.util.List;
 public class ContFull {
     @Autowired
    ServFactory servFactory;
-
+//Get
     @GetMapping({"/", "/VerEmpresas"})
     public String viewEmpresa(Model model){
         List<Empresa> empresaList = servFactory.getAllEmpresas();
         model.addAttribute("factorylist",empresaList);
         return "verEmpresas";
+    }
+//Post
+    @GetMapping("/AgregarEmpresa")
+    public String newEmpresa(Model model){
+        Empresa fac = new Empresa();
+        model.addAttribute("fac",fac);
+        return "agregarEmpresa";
     }
 
 }

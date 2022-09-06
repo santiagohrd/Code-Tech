@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bab210e-3571-4c74-adf7-5a8150d048fb" name="Changes" comment="servicio y controller">
+    <list default="true" id="7bab210e-3571-4c74-adf7-5a8150d048fb" name="Changes" comment="probando html">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/agregarEmpresa.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Contoller/ContFull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Contoller/ContFull.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/verEmpresas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/verEmpresas.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662170716283</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="probando html">
+      <created>1662395735808</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1662395735808</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,6 +156,7 @@
     <MESSAGE value="ejecucion" />
     <MESSAGE value="Creación de servicio y repositorio Empresa" />
     <MESSAGE value="servicio y controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="servicio y controller" />
+    <MESSAGE value="probando html" />
+    <option name="LAST_COMMIT_MESSAGE" value="probando html" />
   </component>
 </project>
