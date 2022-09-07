@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -16,21 +17,21 @@ import java.util.List;
 public class ContFull {
     @Autowired
    ServFactory servFactory;
-//Get
+//Get ver empresas
     @GetMapping({"/", "/VerEmpresas"})
     public String viewEmpresa(Model model){
         List<Empresa> empresaList = servFactory.getAllEmpresas();
         model.addAttribute("factorylist",empresaList);
         return "verEmpresas";
     }
-
+//agregar empresa
     @GetMapping("/AgregarEmpresa")
     public String newEmpresa(Model model){
         Empresa fac = new Empresa();
         model.addAttribute("fac",fac);
         return "agregarEmpresa";
     }
-    //Post
+    //Post guardar empresa
     @PostMapping("/GuardarEmpresa")
     public String guardarEmpresa(Empresa fac, RedirectAttributes redirectAttributes){
         if(servFactory.saOrUpFactory(fac)==true){
@@ -38,6 +39,12 @@ public class ContFull {
         }
         return "redirect:/AgregarEmpresa";
     }
-
+//editar empresas
+    @GetMapping("/EditarEmpresa")
+    public String editEmpresa(Model model, @PathVariable Integer id){
+        Empresa fac = servFactory.getFactoryID(id);
+        model.addAttribute("fac",fac);
+        return "editarEmpresa";
+    }
 
 }
