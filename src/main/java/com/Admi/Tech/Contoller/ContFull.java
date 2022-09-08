@@ -1,6 +1,7 @@
 package com.Admi.Tech.Contoller;
 
 import com.Admi.Tech.Modelo.Empresa;
+import com.Admi.Tech.Repository.RepoFactory;
 import com.Admi.Tech.Service.ServFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,11 +41,30 @@ public class ContFull {
         return "redirect:/AgregarEmpresa";
     }
 //editar empresas
-    @GetMapping("/EditarEmpresa")
+    @GetMapping("/EditarEmpresa/{id}")
     public String editEmpresa(Model model, @PathVariable Integer id){
         Empresa fac = servFactory.getFactoryID(id);
         model.addAttribute("fac",fac);
         return "editarEmpresa";
+    }
+//actualizar empresa
+    @PostMapping("/ActualizarEmpresa")
+    public String upEmpresa(Empresa fac){
+        if(servFactory.saOrUpFactory(fac)){
+            return "redirect:/VerEmpresas";
+        }
+        return "redirect:/EditarEmpresa";
+    }
+    //eliminar
+
+    @GetMapping("/EleminarEmpresa/{id}")
+    public String delEmpresa(@PathVariable Integer id){
+        try {
+            servFactory.deletFactory(id);
+        }catch (Exception e){
+            return "redirect:/VerEmpresas";
+        }
+        return "redirect:/VerEmpresas";
     }
 
 }
