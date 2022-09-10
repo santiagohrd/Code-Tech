@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3355c52a-ac17-454e-a6a0-67dfd3ec7c63" name="Changes" comment="controller eliminar y pom">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Repository/RepoEmple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Contoller/ContFull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Contoller/ContFull.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Modelo/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Modelo/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Repository/RepoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Repository/RepoEmpre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Service/ServFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Service/ServEmpre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/agregarEmpresa.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/agregarEmpresa.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editarEmpresa.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editarEmpresa.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +87,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TechApplication" />
+        <item itemvalue="Application.TechApplication" />
+        <item itemvalue="Application.TechApplication" />
+        <item itemvalue="Application.TechApplication" />
         <item itemvalue="Application.TechApplication" />
       </list>
     </recent_temporary>
