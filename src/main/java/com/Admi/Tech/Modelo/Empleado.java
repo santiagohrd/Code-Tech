@@ -7,10 +7,10 @@ public class Empleado {
     private String rol;
     private String empresa;
 
-    public Empleados() {
+    public Empleado() {
     }
 
-    public Empleados(int id, String full_name, String email, String rol, String empresa) {
+    public Empleado(int id, String full_name, String email, String rol, String empresa) {
       this.id = id;
       this.full_name = full_name;
       this.email = email;
@@ -58,6 +58,4 @@ public class Empleado {
     public void setempresa(String empresa) {
         this.empresa = empresa;
     }
-}
-
 }
