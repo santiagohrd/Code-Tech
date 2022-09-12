@@ -6,6 +6,7 @@ import com.Admi.Tech.Service.ServEmple;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,24 +21,32 @@ public class ContEmple {
         return servEmple.getAllEmpleados();
     }
 
+    ///me esta generando un error
     @PostMapping("/users") //Guardar un empleado nuevo
-    public Optional<Empleado> guardarEmpleado(@RequestBody Empleado emple){
+    public Optional<Empleado> guaEmpleado(@RequestBody Empleado emple){
         return Optional.ofNullable(this.servEmple.saOrUpEmple(emple));
+
     }
 
-
+////////
     @GetMapping(path = "users/{id}")
     public Optional<Empleado> empleID(@PathVariable("id")Integer id){
         return this.servEmple.getEmpleID(id);
     }
+
+    @GetMapping("/users/{id}/empleados")
+    public ArrayList<Empleado> emplePorEmpre(@PathVariable("id") Integer id){
+        return this.servEmple.obPorEmpre(id);
+    }
+
     @PatchMapping("user/{id}")
     public Empleado actualizarEmpleado(@PathVariable("id") Integer id, @RequestBody Empleado empleado){
-        Empleado empl=servEmple.getEmpleID(id).get();
-        empl.setNombre(empleado.getNombre());
-        empl.setCorreo(empleado.getCorreo());
-        empl.setEmpresa(empleado.getEmpresa());
-        empl.setRol(empleado.getRol());
-        return servEmple.saOrUpEmple(empl);
+        Empleado emple = servEmple.getEmpleID(id).get();
+        emple.setNombre(empleado.getNombre());
+        emple.setCorreo(empleado.getCorreo());
+        emple.setEmpresa(empleado.getEmpresa());
+        emple.setRol(empleado.getRol());
+        return servEmple.saOrUpEmple(emple);
     }
     @DeleteMapping(path = "users/{id}")
     public String elimEmpleado(@PathVariable("id") Integer id) {
