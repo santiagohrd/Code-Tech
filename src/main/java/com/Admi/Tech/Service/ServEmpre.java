@@ -14,9 +14,9 @@ public class ServEmpre {
     RepoEmpre repoEmpre;
     //retorna la lista de empresas
     public List<Empresa> getAllEmpresas(){
-        List<Empresa> empreyList = new ArrayList<>();
-        repoEmpre.findAll().forEach(empresa -> empreyList.add(empresa));
-        return  empreyList;
+        List<Empresa> empreList = new ArrayList<>();
+        repoEmpre.findAll().forEach(empresa -> empreList.add(empresa));
+        return  empreList;
     }
     //retorna objeto tipo empresa desde el id
     public Empresa getEmpreyID(Integer id){

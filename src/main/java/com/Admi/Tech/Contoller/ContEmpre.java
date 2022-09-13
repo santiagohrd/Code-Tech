@@ -11,63 +11,65 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.persistence.Entity;
 import java.util.List;
 
 @Controller
-public class ContFull {
+public class ContEmpre {
     @Autowired
-    ServEmpre servFactory;
+    ServEmpre servEmpre;
     //Get ver empresas
     @GetMapping({"/", "/VerEmpresas"})
     public String viewEmpresa(Model model){
-        List<Empresa> empresaList = servFactory.getAllEmpresas();
-        model.addAttribute("factorylist",empresaList);
+        List<Empresa> empresaList = servEmpre.getAllEmpresas();
+        model.addAttribute("emprelist",empresaList);
         return "verEmpresas";
     }
     //agregar empresa
     @GetMapping("/AgregarEmpresa")
     public String newEmpresa(Model model){
-        Empresa fac = new Empresa();
-        model.addAttribute("fac",fac);
+        Empresa empre = new Empresa();
+        model.addAttribute("empre",empre);
         return "agregarEmpresa";
     }
     //Post guardar empresa
     @PostMapping("/GuardarEmpresa")
-    public String guardarEmpresa(Empresa fac, RedirectAttributes redirectAttributes){
-        if(servFactory.saOrUpEmpre(fac)==true){
-            redirectAttributes.addAttribute("mensaje","Guardo correctamente");
+    public String guardarEmpresa(Empresa empre, RedirectAttributes redirectAttributes){
+        if(servEmpre.saOrUpEmpre(empre)==true){
+            //mensaje de accion corresta
+            redirectAttributes.addAttribute("mensaje","SAVE OK");
             return "redirect:/VerEmpresas";
         }
-        redirectAttributes.addAttribute("mensaje","Hubo un error");
+        redirectAttributes.addAttribute("mensaje","SAVE ERRORr");
         return "redirect:/AgregarEmpresa";
     }
     //editar empresas
     @GetMapping("/EditarEmpresa/{id}")
     public String editEmpresa(Model model, @PathVariable Integer id){
-        Empresa fac = servFactory.getEmpreyID(id);
-        model.addAttribute("fac",fac);
+        Empresa empre = servEmpre.getEmpreyID(id);
+        model.addAttribute("empre",empre);
         return "editarEmpresa";
     }
     //actualizar empresa
     @PostMapping("/ActualizarEmpresa")
-    public String upEmpresa(@ModelAttribute("fac") Empresa fac, RedirectAttributes redirectAttributes){
-        redirectAttributes.addAttribute("mensaje","Actualizo correctamente");
-        if(servFactory.saOrUpEmpre(fac)){
+    public String upEmpresa(@ModelAttribute("empre") Empresa empre, RedirectAttributes redirectAttributes){
+        redirectAttributes.addAttribute("mensaje","UPDATE OK");
+        if(servEmpre.saOrUpEmpre(empre)){
             return "redirect:/VerEmpresas";
         }
-        redirectAttributes.addAttribute("mensaje","Hubo un error en la actualizacion");
+        redirectAttributes.addAttribute("mensaje","UPDATE ERROR");
         return "redirect:/EditarEmpresa";
     }
     //eliminar
     @GetMapping("/EliminarEmpresa/{id}")
-    public String delEmpresa(@PathVariable Integer id){
+    public String delEmpresa(@PathVariable Integer id, RedirectAttributes redirectAttributes){
         try {
-            servFactory.deletEmpre(id);
+            servEmpre.deletEmpre(id);
         }catch (Exception e){
-            return "redirect:/VerEmpresa";
+            redirectAttributes.addAttribute("mensaje","DELET ERROR");
+            return "redirect:/VerEmpresas";
         }
-        return "redirect:/VerEmpresa";
+        redirectAttributes.addAttribute("mensaje","DELET OK");
+        return "redirect:/VerEmpresas";
     }
 
 
