@@ -13,6 +13,10 @@ public class MovimientoDinero {
     private int cantidad;
     private String user;
 
+    @ManyToOne
+    @JoinColumn(name = "empleado_movimientos")
+    private Empleado usuario;
+
     public MovimientoDinero(int id, String concepto, int cantidad, String user){
         this.id = id;
         this.concepto = concepto;
