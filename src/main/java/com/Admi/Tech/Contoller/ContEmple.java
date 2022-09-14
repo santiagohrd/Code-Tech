@@ -39,7 +39,7 @@ public class ContEmple {
         return this.servEmple.obPorEmpre(id);
     }
 
-    @PatchMapping("user/{id}")
+    @PatchMapping("/user/{id}")
     public Empleado actualizarEmpleado(@PathVariable("id") Integer id, @RequestBody Empleado empleado){
         Empleado emple = servEmple.getEmpleID(id).get();
         emple.setNombre(empleado.getNombre());
@@ -48,7 +48,7 @@ public class ContEmple {
         emple.setRol(empleado.getRol());
         return servEmple.saOrUpEmple(emple);
     }
-    @DeleteMapping(path = "users/{id}")
+    @DeleteMapping(path = "/users/{id}")
     public String elimEmpleado(@PathVariable("id") Integer id) {
         boolean resp = this.servEmple.deleEmple(id);
         if (resp) {
@@ -57,8 +57,4 @@ public class ContEmple {
             return "L eliminacion no se realizo, No se elimino el id" + id;
         }
     }
-
-
-
-
 }

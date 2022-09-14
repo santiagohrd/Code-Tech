@@ -1,8 +1,7 @@
 package com.Admi.Tech.Service;
 
-import com.Admi.Tech.Modelo.Empresa;
-import com.Admi.Tech.Modelo.MovimientoDinero;
-import com.Admi.Tech.Repository.RepoMovimientos;
+import com.Admi.Tech.Modelo.MovDinero;
+import com.Admi.Tech.Repository.RepoMovDi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,31 +12,39 @@ import java.util.List;
 public class ServMov {
 
     @Autowired
-    RepoMovimientos repoMovimientos;
+    RepoMovDi repoMovDi;
 
-    public List<MovimientoDinero> getAllMov() {
-        List<MovimientoDinero> movList = new ArrayList<>();
-        repoMovimientos.findAll().forEach(mov -> movList.add(mov));
+    public List<MovDinero> getAllMov() {
+        List<MovDinero> movList = new ArrayList<>();
+        repoMovDi.findAll().forEach(mov -> movList.add(mov));
         return movList;
     }
     //retorna objeto tipo empresa desde el id
-    public MovimientoDinero getMovID(Integer id){
-        return repoMovimientos.findById(id).get();
+    public MovDinero getMovID(Integer id){
+        return repoMovDi.findById(id).get();
     }
 
     //actualizacion o guardar objeto tipo empresa
-    public MovimientoDinero saOrUpMov(MovimientoDinero movimientoDinero){
-        MovimientoDinero mov= repoMovimientos.save(movimientoDinero);
+    public MovDinero saOrUpMov(MovDinero movDinero){
+        MovDinero mov= repoMovDi.save(movDinero);
         return mov;
     }
 
     //Eleminar
     public boolean deleMov(Integer id){
-        repoMovimientos.deleteById(id);
-        if(repoMovimientos.findById(id) != null){
+        repoMovDi.deleteById(id);
+        if(repoMovDi.findById(id) != null){
             return true;
         }
         return false;
+    }
+    //metodo para obtener por el id del empleado
+    public  ArrayList<MovDinero> obPorEmple(Integer id){
+        return  this.repoMovDi.findByEmple(id);
+    }
+
+    public ArrayList<MovDinero> obPorEmpre(Integer id){
+        return this.repoMovDi.findByEmpre(id);
     }
 
     }
