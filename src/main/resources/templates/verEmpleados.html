@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>EMPRESAS</title>
+    <title>EMPLEADOS</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
     <style>
     a{
     color:white;
@@ -21,53 +22,53 @@
 </head>
 <body>
 <div class="container-fluid">
-    <h1>LISTA DE EMPRESAS</h1>
+    <h1>LISTA DE EMPLEADOS</h1>
     <table class="table">
         <tr><!--recuadro de la tabla-->
             <th>ID</th><!--columna interno-->
             <th>Nombre</th>
-            <th>Dirección</th>
-            <th>Teléfono</th>
-            <th>NIT</th>
-            <th>EMPLEADOS</th>
+            <th>Correo</th>
+            <th>Empesa</th>
+            <th>Rol</th>
             <th>EDITAR</th>
             <th>ELIMINAR</th>
         </tr>
-<!--llenar tabla con lo que creamos en cont full-->
-        <tr th:each="empresa : ${emprelist}">
-            <td th:text="${empresa.id}"></td>
-            <td th:text="${empresa.nombre}"></td>
-            <td th:text="${empresa.direccion}"></td>
-            <td th:text="${empresa.telefono}"></td>
-            <td th:text="${empresa.NIT}"></td>
-            <td><button type="button" class="btn btn-info"><a th:href="@{/Empresa/{id}/Empleados(id=${empresa.id})}">Ver</a></button></td>
-            <td><button type="button" class="btn btn-warning"><a th:href="@{/EditarEmpresa/{id}(id=${empresa.id})}">Editar</a></button></td>
-            <td><button type="button" class="btn btn-danger"><a th:href="@{/EliminarEmpresa/{id}(id=${empresa.id})}">Eliminar</a></button></td>
+        <!--llenar tabla con lo que creamos en cont full-->
+        <tr th:each="empleado : ${emplelist}">
+            <td th:text="${empleado.id}"></td>
+            <td th:text="${empleado.nombre}"></td>
+            <td th:text="${empleado.correo}"></td>
+            <td th:text="${empleado.empresa.nombre}"></td>
+            <td th:if="${empleado.rol =='1'}">Administrativo</td>
+            <td th:if="${empleado.rol =='1'}">Operativo</td>
+            <td><button type="button" class="btn btn-warning"><a th:href="@{/EditarEmpleado/{id}(id=${empleado.id})}">Editar</a></button></td>
+            <td><button type="button" class="btn btn-danger"><a th:href="@{/EliminarEmpleado/{id}(id=${empleado.id})}">Eliminar</a></button></td>
         </tr>
     </table>
 
     <!--Button para agregar-->
-    <button type="button" class="btn btn-info"><a th:href="@{/AgregarEmpresa}">Agregar Nueva Empresa</a></button>
-
-    <button type="button" class="btn btn-info"><a th:href="@{/VerEmpleados}">Ver Lista de Empleados</a></button>
-
+    <button type="button" class="btn btn-info"><a th:href="@{/AgregarEmpleado}">Agregar Nuevo Empleado</a></button>
+    <br> <br>
+    <a href="javascript: history.go(-1)" class="btn btn-info" role="button">Atrás</a>
 </div>
+
+
 
 <script th:inline="javascript">
     window.onload=function(){
 
         var msg= [[${mensaje}]];
         if (msg == "saveOK"){
-            Command : toastr["success"]("Empresa creada con éxito!")
+            Command : toastr["success"]("Empleado registrado con éxito!")
             }
         else if (msg == "updateOK"){
-            Command : toastr["success"]("Empresa actualizada con éxito!")
+            Command : toastr["success"]("Empleado actualizado con éxito!")
         }
         else if (msg == "deleteOK"){
-            Command : toastr["error"]("Empresa eliminada con éxito!")
+            Command : toastr["error"]("Registro de empleado eliminado con éxito!")
         }
         else if (msg == "deleteError"){
-            Command : toastr["error"]("Empresa no ha sido eliminada!")
+            Command : toastr["error"]("Registro de empleado no ha sido eliminado!")
         }
         toastr.options={
             "positionClass": "toast-top-right",
@@ -75,8 +76,8 @@
             "showMethod":"fadeIn",
             "hideMethod":"fadeOut",
         }
-    }
 
+    }
 </script>
 </body>
 </html>

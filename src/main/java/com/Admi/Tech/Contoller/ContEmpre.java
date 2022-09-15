@@ -19,16 +19,18 @@ public class ContEmpre {
     ServEmpre servEmpre;
     //Get ver empresas
     @GetMapping({"/", "/VerEmpresas"})
-    public String viewEmpresa(Model model){
+    public String viewEmpresa(Model model, @ModelAttribute("mensaje") String mensaje){
         List<Empresa> empresaList = servEmpre.getAllEmpresas();
         model.addAttribute("emprelist",empresaList);
+        model.addAttribute("mensaje",mensaje);
         return "verEmpresas";
     }
     //agregar empresa
     @GetMapping("/AgregarEmpresa")
-    public String newEmpresa(Model model){
+    public String newEmpresa(Model model, @ModelAttribute("mensaje") String mensaje){
         Empresa empre = new Empresa();
         model.addAttribute("empre",empre);
+        model.addAttribute("mensaje",mensaje);
         return "agregarEmpresa";
     }
     //Post guardar empresa
@@ -39,14 +41,15 @@ public class ContEmpre {
             redirectAttributes.addAttribute("mensaje","SAVE OK");
             return "redirect:/VerEmpresas";
         }
-        redirectAttributes.addAttribute("mensaje","SAVE ERRORr");
+        redirectAttributes.addAttribute("mensaje","SAVE ERROR");
         return "redirect:/AgregarEmpresa";
     }
     //editar empresas
     @GetMapping("/EditarEmpresa/{id}")
-    public String editEmpresa(Model model, @PathVariable Integer id){
+    public String editEmpresa(Model model, @PathVariable Integer id, @ModelAttribute("mensaje") String mensaje){
         Empresa empre = servEmpre.getEmpreyID(id);
         model.addAttribute("empre",empre);
+        model.addAttribute("mensaje", mensaje);
         return "editarEmpresa";
     }
     //actualizar empresa
@@ -65,10 +68,10 @@ public class ContEmpre {
         try {
             servEmpre.deletEmpre(id);
         }catch (Exception e){
-            redirectAttributes.addAttribute("mensaje","DELET ERROR");
+            redirectAttributes.addAttribute("mensaje","DELET OK");
             return "redirect:/VerEmpresas";
         }
-        redirectAttributes.addAttribute("mensaje","DELET OK");
+        redirectAttributes.addAttribute("mensaje","DELET ERROR");
         return "redirect:/VerEmpresas";
     }
 
