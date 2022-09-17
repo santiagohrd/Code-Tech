@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>VER MOVIMIENTOS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <style>
+    a{
+    color:white;
+    }
+    a:hover {
+    color: black;
+    text-decoration:none;
+    }
+</style>
+</head>
+<body>
+<div class="container-fluid">
+    <h1>LISTA DE MOVIMIENTOS</h1>
+    <table class="table">
+        <tr><!--recuadro de la tabla-->
+            <th>ID</th><!--columna interno-->
+            <th>MONTO</th>
+            <th>CONCEPTO</th>
+            <th>EMPLEADO RESPONSABLE</th>
+            <th>EDITAR</th>
+            <th>ELIMINAR</th>
+        </tr>
+        <!--llenar tabla con lo que creamos en cont full-->
+        <tr th:each="movimiento : ${movDList}">
+            <td th:text="${movimiento.id}"></td>
+            <td th:text="${movimiento.monto}"></td>
+            <td th:if="${movimiento.rol =='1'}">Papeleria</td>
+            <td th:if="${movimiento.rol =='2'}">Servicios publicos o privados</td>
+            <td th:if="${movimiento.rol =='3'}">Caja menor</td>
+            <td th:if="${movimiento.rol =='4'}">Opresativos</td>
+            <td th:if="${movimiento.rol =='5'}">Tributario</td>
+            <td th:if="${movimiento.rol =='6'}">Moviliario</td>
+            <td th:if="${movimiento.rol =='7'}">Maquinariay equipos</td>
+
+            <td th:text="${movimiento.usuario.nombre}"></td>
+
+            <td><button type="button" class="btn btn-warning"><a th:href="@{/EditarMovimiento/{id}(id=${movimiento.id})}">Editar</a></button></td>
+            <td><button type="button" class="btn btn-danger"><a th:href="@{/EliminarMovimiento/{id}(id=${movimiento.id})}">Eliminar</a></button></td>
+        </tr>
+    </table>
+
+    <!--Button para agregar-->
+    <button type="button" class="btn btn-info"><a th:href="@{/AgregarMovimiento}">Registarar Movimiento</a></button>
+
+    <button type="button" class="btn btn-info"><a th:href="@{/VerEmpleados}">Ver Lista de Empleados</a></button>
+    <button type="button" class="btn btn-info"><a th:href="@{/VerEmpresas}">Ver Lista de Empresas</a></button>
+
+</div>
+
+<script th:inline="javascript">
+    window.onload=function(){
+
+        var msg= [[${mensaje}]];
+        if (msg == "saveOK"){
+            Command : toastr["success"]("Empresa creada con éxito!")
+            }
+        else if (msg == "updateOK"){
+            Command : toastr["success"]("Empresa actualizada con éxito!")
+        }
+        else if (msg == "deleteOK"){
+            Command : toastr["error"]("Empresa eliminada con éxito!")
+        }
+        else if (msg == "deleteError"){
+            Command : toastr["error"]("Empresa no ha sido eliminada!")
+        }
+        toastr.options={
+            "positionClass": "toast-top-right",
+            "showDuration":"300",
+            "showMethod":"fadeIn",
+            "hideMethod":"fadeOut",
+        }
+    }
+
+</script>
+</body>
+</html>

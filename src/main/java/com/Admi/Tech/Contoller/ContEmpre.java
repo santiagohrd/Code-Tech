@@ -60,7 +60,7 @@ public class ContEmpre {
             return "redirect:/VerEmpresas";
         }
         redirectAttributes.addAttribute("mensaje","UPDATE ERROR");
-        return "redirect:/EditarEmpresa";
+        return "redirect:/EditarEmpresa/" + empre.getId();
     }
     //eliminar
     @GetMapping("/EliminarEmpresa/{id}")

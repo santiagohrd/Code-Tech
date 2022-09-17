@@ -18,6 +18,7 @@ public class ContEmple {
 
     @Autowired
     ServEmple servEmple;
+    @Autowired
     ServEmpre servEmpre;
 
     @GetMapping({"/VerEmpleados"})
@@ -33,8 +34,8 @@ public class ContEmple {
         Empleado emple = new Empleado();
         model.addAttribute("emple",emple);
         model.addAttribute("mensaje",mensaje);
-        //List<Empresa> listEmpre = servEmpre.getAllEmpresas();
-        //model.addAttribute("emprelist", listEmpre);
+        List<Empresa> listEmpre = servEmpre.getAllEmpresas();
+        model.addAttribute("emprelist", listEmpre);
         return "agregarEmpleado";
     }
     @PostMapping("/GuardarEmpleado")
@@ -63,7 +64,7 @@ public class ContEmple {
             return "redirect:/VerEmpleados";
         }
         redirectAttributes.addAttribute("mensaje","UPDATE ERROR");
-        return "redirect:/EditarEmpleado";
+        return "redirect:/EditarEmpleado/" + emple.getId();
     }
     @GetMapping("/EliminarEmpleado/{id}")
     public String delEmpleado(@PathVariable Integer id, RedirectAttributes redirectAttributes){
@@ -74,7 +75,7 @@ public class ContEmple {
             return "redirect:/VerEmpleados";
         }
         redirectAttributes.addAttribute("mensaje","DELET ERROR");
-        return "redirect:/VerEmpleadosb";
+        return "redirect:/VerEmpleados";
     }
 
     @GetMapping("/Empresa/{id}/Empleados")

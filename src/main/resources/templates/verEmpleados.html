@@ -40,7 +40,7 @@
             <td th:text="${empleado.correo}"></td>
             <td th:text="${empleado.empresa.nombre}"></td>
             <td th:if="${empleado.rol =='1'}">Administrativo</td>
-            <td th:if="${empleado.rol =='1'}">Operativo</td>
+            <td th:if="${empleado.rol =='2'}">Operativo</td>
             <td><button type="button" class="btn btn-warning"><a th:href="@{/EditarEmpleado/{id}(id=${empleado.id})}">Editar</a></button></td>
             <td><button type="button" class="btn btn-danger"><a th:href="@{/EliminarEmpleado/{id}(id=${empleado.id})}">Eliminar</a></button></td>
         </tr>
@@ -49,6 +49,7 @@
     <!--Button para agregar-->
     <button type="button" class="btn btn-info"><a th:href="@{/AgregarEmpleado}">Agregar Nuevo Empleado</a></button>
     <br> <br>
+    <button type="button" class="btn btn-info"><a th:href="@{/VerEmpresas}">Ver Lista de Empresas</a></button>
     <a href="javascript: history.go(-1)" class="btn btn-info" role="button">Atrás</a>
 </div>
 
