@@ -3,6 +3,7 @@ package com.Admi.Tech.Modelo;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name="Movimientos")
@@ -17,13 +18,18 @@ public class MovDin {
     @JoinColumn(name = "empleado_id")
     private Empleado usuario;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    public Date fecha;
+
+
     public MovDin() {
     }
 
-    public MovDin(long monto, String concepto, Empleado empleado) {
+    public MovDin(long monto, String concepto, Empleado empleado,Date fecha) {
         this.monto = monto;
         this.concepto = concepto;
         this.usuario = empleado;
+        this.fecha = fecha;
 
     }
 
@@ -59,4 +65,11 @@ public class MovDin {
         this.usuario = empleado;
     }
 
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
 }

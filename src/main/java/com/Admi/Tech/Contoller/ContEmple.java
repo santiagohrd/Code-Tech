@@ -5,6 +5,9 @@ import com.Admi.Tech.Modelo.Empresa;
 import com.Admi.Tech.Service.ServEmple;
 import com.Admi.Tech.Service.ServEmpre;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -40,13 +43,15 @@ public class ContEmple {
     }
     @PostMapping("/GuardarEmpleado")
     public String guardarEmpleado(Empleado emple, RedirectAttributes redirectAttributes){
+        String passEncrip = passwordEncoder().encode(emple.getPassword());
+        emple.setPassword(passEncrip);
         if(servEmple.saOrUpEmple(emple)==true){
             //mensaje de accion corresta
             redirectAttributes.addAttribute("mensaje","SAVE OK");
             return "redirect:/VerEmpleados";
         }
-        redirectAttributes.addAttribute("mensaje","SAVE ERROR");
-        return "redirect:/AgregarEmleados";
+        redirectAttributes.addFlashAttribute("mensaje","SAVE ERROR");
+        return "redirect:/AgregarEmpleado";
     }
     @GetMapping("/EditarEmpleado/{id}")
     public String editEmpleado(Model model, @PathVariable Integer id, @ModelAttribute("mensaje") String mensaje){
@@ -59,22 +64,26 @@ public class ContEmple {
     }
     @PostMapping("/ActualizarEmpleado")
     public String upEmpleado(@ModelAttribute("emple") Empleado emple, RedirectAttributes redirectAttributes){
-        redirectAttributes.addAttribute("mensaje","UPDATE OK");
+        Integer id=emple.getId();
+        String contAnt=servEmple.getEmpleID(id).get().getPassword();
+        if(!emple.getPassword().equals(contAnt)){
+            String passEncrip = passwordEncoder().encode(emple.getPassword());
+            emple.setPassword(passEncrip);
+        }
         if(servEmple.saOrUpEmple(emple)){
+        redirectAttributes.addFlashAttribute("mensaje","UPDATE OK");
             return "redirect:/VerEmpleados";
         }
-        redirectAttributes.addAttribute("mensaje","UPDATE ERROR");
+        redirectAttributes.addFlashAttribute("mensaje","UPDATE ERROR");
         return "redirect:/EditarEmpleado/" + emple.getId();
     }
     @GetMapping("/EliminarEmpleado/{id}")
     public String delEmpleado(@PathVariable Integer id, RedirectAttributes redirectAttributes){
-        try {
-            servEmple.deleEmple(id);
-        }catch (Exception e){
-            redirectAttributes.addAttribute("mensaje","DELET OK");
+        if(servEmple.deleEmple(id)){
+            redirectAttributes.addFlashAttribute("mensaje","DELET OK");
             return "redirect:/VerEmpleados";
         }
-        redirectAttributes.addAttribute("mensaje","DELET ERROR");
+        redirectAttributes.addFlashAttribute("mensaje","DELET ERROR");
         return "redirect:/VerEmpleados";
     }
 
@@ -83,6 +92,16 @@ public class ContEmple {
         List<Empleado> listEmple = servEmple.obPorEmpre(id);
         model.addAttribute("emplelist", listEmple);
         return "verEmpleados";
+    }
+@RequestMapping(value = "/Error")
+public String error(){
+        return "AccDene";
+}
+
+    //Encriptar contraseña
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+       return new BCryptPasswordEncoder();
     }
 
 }

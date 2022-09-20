@@ -41,7 +41,7 @@ public class ContEmpre {
             redirectAttributes.addAttribute("mensaje","SAVE OK");
             return "redirect:/VerEmpresas";
         }
-        redirectAttributes.addAttribute("mensaje","SAVE ERROR");
+        redirectAttributes.addFlashAttribute("mensaje","SAVE ERROR");
         return "redirect:/AgregarEmpresa";
     }
     //editar empresas
@@ -55,25 +55,21 @@ public class ContEmpre {
     //actualizar empresa
     @PostMapping("/ActualizarEmpresa")
     public String upEmpresa(@ModelAttribute("empre") Empresa empre, RedirectAttributes redirectAttributes){
-        redirectAttributes.addAttribute("mensaje","UPDATE OK");
         if(servEmpre.saOrUpEmpre(empre)){
+            redirectAttributes.addAttribute("mensaje","UPDATE OK");
             return "redirect:/VerEmpresas";
         }
-        redirectAttributes.addAttribute("mensaje","UPDATE ERROR");
+        redirectAttributes.addFlashAttribute("mensaje","UPDATE ERROR");
         return "redirect:/EditarEmpresa/" + empre.getId();
     }
     //eliminar
     @GetMapping("/EliminarEmpresa/{id}")
     public String delEmpresa(@PathVariable Integer id, RedirectAttributes redirectAttributes){
-        try {
-            servEmpre.deletEmpre(id);
-        }catch (Exception e){
-            redirectAttributes.addAttribute("mensaje","DELET OK");
+        if(servEmpre.deletEmpre(id)==true){
+            redirectAttributes.addFlashAttribute("mensaje","DELET OK");
             return "redirect:/VerEmpresas";
         }
-        redirectAttributes.addAttribute("mensaje","DELET ERROR");
+        redirectAttributes.addFlashAttribute("mensaje","DELET ERROR");
         return "redirect:/VerEmpresas";
     }
-
-
 }

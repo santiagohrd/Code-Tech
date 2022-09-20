@@ -25,31 +25,40 @@
     <table class="table">
         <tr><!--recuadro de la tabla-->
             <th>ID</th><!--columna interno-->
-            <th>MONTO</th>
+            <th class="text-center">MONTO</th>
             <th>CONCEPTO</th>
             <th>EMPLEADO RESPONSABLE</th>
+            <th>FECHA DEL MIVIMIENTO</th>
             <th>EDITAR</th>
             <th>ELIMINAR</th>
         </tr>
         <!--llenar tabla con lo que creamos en cont full-->
-        <tr th:each="movimiento : ${movDList}">
+        <tr th:each="movimiento : ${movList}">
             <td th:text="${movimiento.id}"></td>
-            <td th:text="${movimiento.monto}"></td>
-            <td th:if="${movimiento.rol =='1'}">Papeleria</td>
-            <td th:if="${movimiento.rol =='2'}">Servicios publicos o privados</td>
-            <td th:if="${movimiento.rol =='3'}">Caja menor</td>
-            <td th:if="${movimiento.rol =='4'}">Opresativos</td>
-            <td th:if="${movimiento.rol =='5'}">Tributario</td>
-            <td th:if="${movimiento.rol =='6'}">Moviliario</td>
-            <td th:if="${movimiento.rol =='7'}">Maquinariay equipos</td>
-
+            <td th:text="${#numbers.formatCurrency(movimiento.monto}"></td>
+            <td th:if="${movimiento.concepto =='1'}">Papeleria</td>
+            <td th:if="${movimiento.concepto =='2'}">Servicios publicos o privados</td>
+            <td th:if="${movimiento.concepto =='3'}">Caja menor</td>
+            <td th:if="${movimiento.concepto =='4'}">Opresativos</td>
+            <td th:if="${movimiento.concepto =='5'}">Tributario</td>
+            <td th:if="${movimiento.concepto =='6'}">Moviliario</td>
+            <td th:if="${movimiento.concepto =='7'}">Maquinariay equipos</td>
             <td th:text="${movimiento.usuario.nombre}"></td>
+            <td th:text="${#dates.format(movimiento.fecha, 'dd/MM/yyyy')}"></td>
 
             <td><button type="button" class="btn btn-warning"><a th:href="@{/EditarMovimiento/{id}(id=${movimiento.id})}">Editar</a></button></td>
             <td><button type="button" class="btn btn-danger"><a th:href="@{/EliminarMovimiento/{id}(id=${movimiento.id})}">Eliminar</a></button></td>
         </tr>
     </table>
 
+    <div class="row">
+        <div class="form-group col-md-12">
+            <label class="col-md-3" for="SumaMontos">TOTAL MOVIMIENTOS</label>
+            <div class="col-md-6">
+                <p th:text="${#numbers.formatCurrency(SumaMontos }" class="form-control" id="SumaMontos"></p>
+            </div>
+        </div>
+    </div>
     <!--Button para agregar-->
     <button type="button" class="btn btn-info"><a th:href="@{/AgregarMovimiento}">Registarar Movimiento</a></button>
 

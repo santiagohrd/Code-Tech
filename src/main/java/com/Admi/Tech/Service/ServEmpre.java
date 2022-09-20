@@ -35,10 +35,10 @@ public class ServEmpre {
     //Eleminar
     public boolean deletEmpre(Integer id){
         repoEmpre.deleteById(id);
-        if(getEmpreyID(id) != null){
-            return false;
+        if(repoEmpre.findById(id) != null){
+            return true;
         }
-        return true;
+        return false;
     }
 
 }

@@ -15,41 +15,57 @@ public class ServMovD {
     @Autowired
     RepoMovD repoMovD;
 
-    public List<MovDin> getAllMov() {
+    public List<MovDin> getAllMov() { //Metodo que me muestra todos los movimientos sin ningn filtro
         List<MovDin> movList = new ArrayList<>();
-        repoMovD.findAll().forEach(mov -> movList.add(mov));
+        repoMovD.findAll().forEach(movimiento -> movList.add(movimiento));  //Recorremos el iterable que regresa el metodo findAll del Jpa y lo guardamos en la lista creada
         return movList;
     }
-    //retorna objeto tipo empresa desde el id
-    public MovDin getMovID(Integer id){
+
+    public MovDin getMovById(Integer id) { //Ver movimientos por id
         return repoMovD.findById(id).get();
     }
 
-    //actualizacion o guardar objeto tipo empresa
-    public boolean saOrUpMov(MovDin movDi){
-        MovDin movD= repoMovD.save(movDi);
-        if(repoMovD.findById(movD.getId()) !=null){
+    public boolean saOrUpdateMov(MovDin movimientoDinero) { //Guardar o actualizar elementos
+        MovDin mov = repoMovD.save(movimientoDinero);
+        if (repoMovD.findById(mov.getId()) != null) {
             return true;
         }
         return false;
     }
 
-    //Eleminar
-    public boolean deleMov(Integer id){
-        repoMovD.deleteById(id);
-        if(repoMovD.findById(id) != null){
-            return true;
+    public boolean deleteMov(Integer id) { //Eliminar movimiento por id
+        repoMovD.deleteById(id); //Eliminar usando el metodo que nos ofrece el repositorio
+        if (this.repoMovD.findById(id).isPresent()){ //Si al buscar el movimiento lo encontramos, no se eliminó (false)
+            return false;
         }
-        return false;
-    }
-    //metodo para obtener por el id del empleado
-    public  ArrayList<MovDin> obPorEmple(Integer id){
-        return  this.repoMovD.findByEmple(id);
+        return true; //Si al buscar el movimiento no lo encontramos, si lo eliminò (true)
     }
 
-    public ArrayList<MovDin> obPorEmpre(Integer id){
-        return this.repoMovD.findByEmpre(id);
+    public ArrayList<MovDin> obtenerPorEmpleado(Integer id) { //Obterner teniendo en cuenta el id del empleado
+        return repoMovD.findByEmple(id);
     }
 
+    public ArrayList<MovDin> obPorEmpr(Integer id) { //Obtener movimientos teniendo en cuenta el id de la empresa a la que pertencen los empleados que la registraron
+        return repoMovD.findByEmpre(id);
+    }
 
+    //Servicio para ver la suma de todos los montos
+    public Long obSumaMon() {
+        return repoMovD.SumarMonto();
+    }
+
+    //Servicio para ver la suma de los montos por empleado
+    public Long MonPorEmple(Integer id) {
+        return repoMovD.MontosPorEmple(id);
+    }
+
+    //Servicio para ver la suma de los montos por empresa
+    public Long MonPorEmpre(Integer id) {
+        return repoMovD.MontosPorEmpre(id);
+    }
+
+    //servicio que nos deja conseguir el id de un empleado si tenemos su correo
+    public Integer IdPorCor(String Correo) {
+        return repoMovD.IdPorCorreo(Correo);
+    }
 }

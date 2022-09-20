@@ -61,9 +61,32 @@
       <label class="col-md-3" for="Rol">ROL DEL EMPLEADO:</label>
       <div class="col-md-6">
         <select th:field="*{Rol}" class="form-control" id="Rol" required="required">
-        <option th:value=1>Administrativo</option>
-          <option th:value=2>Operativo</option>
+        <option th:value='ROLE_ADMIN'>Administrativo</option>
+          <option th:value='ROLE_USER'>Operativo</option>
         </select>
+        </div>
+      </div>
+    </div>
+
+    <!--Contaraseña-->
+    <div class="row">
+      <div class="form-group col-md-12">
+        <label class="col-md-3" for="password">CONTRASEÑA DEL EMPLEADO:</label>
+        <div class="col-md-6">
+          <input type="password" th:field="*{password}" class="form-control" id="password" required="required">
+        </div>
+      </div>
+    </div>
+
+    <!--Estado-->
+    <div class="row">
+      <div class="form-group col-md-12">
+        <label class="col-md-3" for="Rol">ESTADO DEL EMPLEADO:</label>
+        <div class="col-md-6">
+          <select th:field="*{estado}" class="form-control" id="estado" required="required">
+            <option th:value=1>Activo</option>
+            <option th:value=0>Inactivo</option>
+          </select>
         </div>
       </div>
     </div>

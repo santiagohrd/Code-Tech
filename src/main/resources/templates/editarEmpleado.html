@@ -70,9 +70,32 @@
       <label class="col-md-3" for="Rol">ROL DEL EMPLEADO:</label>
       <div class="col-md-6">
         <select th:field="*{Rol}" class="form-control" id="Rol" required="required">
-        <option th:value=1>Administrativo</option>
-          <option th:value=2>Operativo</option>
+        <option th:value='ROLE_ADMIN'>Administrativo</option>
+          <option th:value='ROLE_USER'>Operativo</option>
         </select>
+        </div>
+      </div>
+    </div>
+
+    <!--Contaraseña-->
+    <div class="row">
+      <div class="form-group col-md-12">
+        <label class="col-md-3" for="password">CONTRASEÑA DEL EMPLEADO:</label>
+        <div class="col-md-6">
+          <input type="text" th:field="*{password}" class="form-control" id="password" required="required">
+        </div>
+      </div>
+    </div>
+
+    <!--Estado-->
+    <div class="row">
+      <div class="form-group col-md-12">
+        <label class="col-md-3" for="Rol">ESTADO DEL EMPLEADO:</label>
+        <div class="col-md-6">
+          <select th:field="*{estado}" class="form-control" id="estado" required="required">
+            <option th:value=true>Activo</option>
+            <option th:value=false>Inactivo</option>
+          </select>
         </div>
       </div>
     </div>
@@ -85,15 +108,14 @@
     </div>
 
   </form>
-  <!-- button atras primera version
-  <div class="row">
-    <div class="form-group col-md-2">
-      <button type="button" class="btn btn-primary">VOLVER</button>
-    </div>
-  </div>-->
   <br>
   <a href="javascript: history.go(-1)" class="btn btn-info" role="button">Atrás</a>
 
 </div>
+<!--Contraseña Oculta-->
+<script th:inline="javascript">
+  window.onload=function(){
+  document.getElementById("password").type="password"}
+</script>
 </body>
 </html>

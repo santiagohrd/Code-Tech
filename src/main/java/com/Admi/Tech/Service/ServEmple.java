@@ -47,7 +47,7 @@ public class ServEmple {
     //Eleminar
     public boolean deleEmple(Integer id){
         repoEmple.deleteById(id);
-        if(repoEmple.findById(id) != null){
+        if(this.repoEmple.findById(id).isPresent()){
             return true;
         }
         return false;

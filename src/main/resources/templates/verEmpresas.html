@@ -22,6 +22,8 @@
 <body>
 <div class="container-fluid">
     <h1>LISTA DE EMPRESAS</h1>
+    <!--que salga el nombre de quien esta -->
+    <a th: inline="text">User:[[${#httpServletRequest.remoteUser}]]</a>
     <table class="table">
         <tr><!--recuadro de la tabla-->
             <th>ID</th><!--columna interno-->
@@ -50,6 +52,8 @@
     <button type="button" class="btn btn-info"><a th:href="@{/AgregarEmpresa}">Agregar Nueva Empresa</a></button>
 
     <button type="button" class="btn btn-info"><a th:href="@{/VerEmpleados}">Ver Lista de Empleados</a></button>
+
+    <button type="button" class="btn btn-danger"><a th:href="@{/logout}">Cerrar Seción</a></button>
 
 </div>
 
