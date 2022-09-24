@@ -4,51 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3355c52a-ac17-454e-a6a0-67dfd3ec7c63" name="Changes" comment="sign in, controladore, templates y otras cosas.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Contoller/UsersCont.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Modelo/UsersModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Repository/UsersRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Service/UsersServ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/agregar_Empresa.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/agregar_Movimiento.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editar_Empresa.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editar_Movimiento.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/personal_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/register_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/ver_Movimientos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Contoller/ContEmple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Contoller/EmpleadoCont.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Contoller/ContEmpre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Contoller/EmpresaCont.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Contoller/ContMovD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Contoller/MovimientoCont.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Handler/CusSuccHand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Modelo/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Modelo/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Modelo/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Modelo/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Modelo/MovDin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Modelo/MovimientoDinero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Repository/RepoEmple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Repository/EmpleadoRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Repository/RepoEmpre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Repository/EmpresaRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Repository/RepoMovD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Repository/MovimientoRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Safety/ConfSafe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Service/ServEmple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Service/EmpleadoServ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Service/ServEmpre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Service/EmpresaServ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Service/ServMovD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Service/MovimientoServ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/TechApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/TechApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/AccDene.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/EditarMovimiento.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/agregarEmpleado.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/agregar_Empleado.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/agregarEmpresa.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/agregarMovimiento.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editarEmpleado.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editar_Empleado.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editarEmpresa.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/verEmpleados.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ver_Empleados.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/verEmpresas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ver_Empresas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/verMovimientos.html" beforeDir="false" />
-    </list>
+    <list default="true" id="3355c52a-ac17-454e-a6a0-67dfd3ec7c63" name="Changes" comment="Verificación corrección y terminación de temp rep cont, serv. etc. faltan unas cositas pero son temas menores" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -284,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663643746000</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Verificación corrección y terminación de temp rep cont, serv. etc. faltan unas cositas pero son temas menores">
+      <created>1664012695899</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1664012695899</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -314,7 +277,8 @@
     <MESSAGE value="Ser Cont Repo de Empleados" />
     <MESSAGE value="Movimientos de dinero creacion de ser contro repo" />
     <MESSAGE value="sign in, controladore, templates y otras cosas." />
-    <option name="LAST_COMMIT_MESSAGE" value="sign in, controladore, templates y otras cosas." />
+    <MESSAGE value="Verificación corrección y terminación de temp rep cont, serv. etc. faltan unas cositas pero son temas menores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Verificación corrección y terminación de temp rep cont, serv. etc. faltan unas cositas pero son temas menores" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Code_Tech$TechApplication.ic" NAME="TechApplication Coverage Results" MODIFIED="1662938895605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
