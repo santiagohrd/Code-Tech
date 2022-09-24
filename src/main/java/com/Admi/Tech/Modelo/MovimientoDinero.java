@@ -7,10 +7,11 @@ import java.util.Date;
 
 @Entity
 @Table(name="Movimientos")
-public class MovDin {
+public class MovimientoDinero {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int id;
     private long monto;
     private String concepto;
@@ -22,10 +23,10 @@ public class MovDin {
     public Date fecha;
 
 
-    public MovDin() {
+    public MovimientoDinero() {
     }
 
-    public MovDin(long monto, String concepto, Empleado empleado,Date fecha) {
+    public MovimientoDinero(long monto, String concepto, Empleado empleado,Date fecha) {
         this.monto = monto;
         this.concepto = concepto;
         this.usuario = empleado;
@@ -73,3 +74,4 @@ public class MovDin {
         this.fecha = fecha;
     }
 }
+

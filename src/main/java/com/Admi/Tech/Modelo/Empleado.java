@@ -2,29 +2,32 @@ package com.Admi.Tech.Modelo;
 
 
 import javax.persistence.*;
+
 @Entity
 @Table(name="Empleado")
 public class Empleado {
 
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private int id;
-        private String nombre;
-        private String correo;
-        @ManyToOne
-        @JoinColumn(name = "Empresa_id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-        private Empresa empresa;
-        private String rol;
+    private int id;
+    private String nombre;
+    private String correo;
+    @ManyToOne
+    @JoinColumn(name = "Empresa_id")
 
-        private String Password;
+    private Empresa empresa;
 
-        private Boolean estado;
+    private String rol;
 
-        public Empleado() {
-        }
+    private String Password;
 
-    public Empleado(String nombre, String correo, Empresa empresa, String rol,String password, Boolean estado) {
+    private Boolean estado;
+
+    public Empleado() {
+    }
+
+    public Empleado(String nombre, String correo, Empresa empresa, String rol, String password, Boolean estado) {
         this.nombre = nombre;
         this.correo = correo;
         this.empresa = empresa;
