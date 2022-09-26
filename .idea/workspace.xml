@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3355c52a-ac17-454e-a6a0-67dfd3ec7c63" name="Changes" comment="controller y html de editar">
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+    <list default="true" id="3355c52a-ac17-454e-a6a0-67dfd3ec7c63" name="Changes" comment="Verificación corrección y terminación de temp rep cont, serv. etc. faltan unas cositas pero son temas menores">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Contoller/ContFull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/Contoller/ContFull.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/TechApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Admi/Tech/TechApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editarEmpresa.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editarEmpresa.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +57,7 @@
     </option>
   </component>
   <component name="ProjectId" id="2DwSKwgnbDKu9OqzZ4Bknsah4t9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -70,14 +67,19 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Users/Lenovo/Documents/Proyectos/prueba&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Users/Lenovo/Documents/Proyectos/Code&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\IdeaProjects\Code-Tech\src\main\resources\templates" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="TechApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Admi.Tech.TechApplication" />
-      <module name="Proyecto" />
+      <module name="Tech" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.Admi.Tech.*" />
@@ -90,6 +92,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TechApplication" />
+        <item itemvalue="Application.TechApplication" />
+        <item itemvalue="Application.TechApplication" />
+        <item itemvalue="Application.TechApplication" />
         <item itemvalue="Application.TechApplication" />
       </list>
     </recent_temporary>
@@ -173,7 +179,91 @@
       <option name="project" value="LOCAL" />
       <updated>1662523454866</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="controller eliminar y pom">
+      <created>1662690537873</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1662690537873</updated>
+    </task>
+    <task id="LOCAL-00012" summary="controller eliminar solucionados y cambios de nombre">
+      <created>1662840967770</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1662840967770</updated>
+    </task>
+    <task id="LOCAL-00013" summary="SERVICIOS EMPREADOS CONTROLLER">
+      <created>1663036791162</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1663036791162</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Ser Cont Repo de Empleados">
+      <created>1663282579714</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1663282579714</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Ser Cont Repo de Empleados">
+      <created>1663282667261</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1663282667261</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Ser Cont Repo de Empleados">
+      <created>1663296976462</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1663296976462</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Movimientos de dinero creacion de ser contro repo">
+      <created>1663380026912</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1663380026912</updated>
+    </task>
+    <task id="LOCAL-00018" summary="sign in, controladore, templates y otras cosas.">
+      <created>1663643249383</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1663643249383</updated>
+    </task>
+    <task id="LOCAL-00019" summary="sign in, controladore, templates y otras cosas.">
+      <created>1663643746000</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1663643746000</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Verificación corrección y terminación de temp rep cont, serv. etc. faltan unas cositas pero son temas menores">
+      <created>1664012695899</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1664012695899</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Verificación corrección y terminación de temp rep cont, serv. etc. faltan unas cositas pero son temas menores">
+      <created>1664012841037</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1664012841037</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Verificación corrección y terminación de temp rep cont, serv. etc. faltan unas cositas pero son temas menores">
+      <created>1664043126494</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1664043126494</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +287,18 @@
     <MESSAGE value="Realizando metodos de empresa en el contfull" />
     <MESSAGE value="cambios" />
     <MESSAGE value="controller y html de editar" />
-    <option name="LAST_COMMIT_MESSAGE" value="controller y html de editar" />
+    <MESSAGE value="controller eliminar y pom" />
+    <MESSAGE value="controller eliminar solucionados y cambios de nombre" />
+    <MESSAGE value="SERVICIOS EMPREADOS CONTROLLER" />
+    <MESSAGE value="Ser Cont Repo de Empleados" />
+    <MESSAGE value="Movimientos de dinero creacion de ser contro repo" />
+    <MESSAGE value="sign in, controladore, templates y otras cosas." />
+    <MESSAGE value="Verificación corrección y terminación de temp rep cont, serv. etc. faltan unas cositas pero son temas menores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Verificación corrección y terminación de temp rep cont, serv. etc. faltan unas cositas pero son temas menores" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Code_Tech$TechApplication.ic" NAME="TechApplication Coverage Results" MODIFIED="1662938895605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.Admi.Tech.*</FILTER>
+    </SUITE>
   </component>
 </project>
